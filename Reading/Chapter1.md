@@ -6,7 +6,7 @@ An <b>algorithm</b> is a sequence of computational steps that transform an input
 We can also view it as a tool for solving a specified <b>computational problem</b> <br><br>
 An algorithm is said to be <b>correct</b> if, for every input instance, it halts with the correct output. <br>
 
-## 2. Algorithms as a technology 
+## 1.2 Algorithms as a technology 
 If computers were infinitely fast and computer memory was free, we would still want to study algorithms because we need to be able to demonstrate that our solution method terminates
 and does so with the correct answer. <br><br>
 If computers were infinitely fast, any correct method for solving a problem
