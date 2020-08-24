@@ -14,7 +14,7 @@
   * [Complejidad Espacial](#complejidad-espacial-file_folder)
 
 [3. Notación Asintótica](#3-notación-asintótica)
-  * [Notación O Grande (Big-O Notation)](#notación-o-grande-big-o-notation)
+- [Notación O Grande (Big-O Notation)](#notación-o-grande-big-o-notation)
 - [Notación Ω (Omega)](#notación-Ω-omega)
 - [Notación Θ (Theta)](#notación-Θ-theta)
 - [Propiedades](#propiedades)
