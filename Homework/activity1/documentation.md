@@ -1,5 +1,27 @@
 # Documentación 
 
+## Métodos
+1. sumaIterativa	
+- Descripción: Calcule la sumatoria de 1 hasta n con un metodo iterativo.
+- Entrada: Un entero positivo (n)
+- Salida: La sumatoria de 1 hasta n
+- Precondición: n es un entero positivo
+- Postcondición: Nada
+
+2. sumaRecursiva	
+- Descripción: Calcule la sumatoria de 1 hasta n con un metodo recursivo.
+- Entrada: Un entero positivo (n)
+- Salida: La sumatoria de 1 hasta n
+- Precondición: n es un entero positivo
+- Postcondición: Nada
+
+3. sumaDirecta	
+- Descripción: Calcule la sumatoria de 1 hasta n con un metodo matemático directo.
+- Entrada: Un entero positivo (n)
+- Salida: La sumatoria de 1 hasta n
+- Precondición: n es un entero positivo
+- Postcondición: Nada
+- 
 ## Complejidad del Algoritmo
 1. sumaIterativa: O(n)
 2. sumaRecursiva: O(n)
