@@ -21,7 +21,7 @@
 - Salida: La sumatoria de 1 hasta n
 - Precondición: n es un entero positivo
 - Postcondición: Nada
-- 
+  
 ## Complejidad del Algoritmo
 1. sumaIterativa: O(n)
 2. sumaRecursiva: O(n)
