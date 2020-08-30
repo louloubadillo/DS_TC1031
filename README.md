@@ -4,8 +4,8 @@ Semestre: Ago-Dic 2020 <br>
 Profesor: Leonardo Chang <br>
 Desarrollados por: Lourdes Badillo
 ## Descripción de las carpetas
-### :file_folder: Class: Códigos y notas que hice durante las clases.
-### :file_folder: Exercises: Ejercicios que hice para prácticar los conceptos vistos.
-### :file_folder: Homework: Las tareas que desarrollé para la materia. 
-### :file_folder: Reading: Resúmenes de los capítulos del libro Introduction to Algorithms.
-### :file_folder: Resources: Códigos y notas proporcionadas por el profesor de la materia.  
+-  :file_folder: Class: Códigos y notas que hice durante las clases.
+-  :file_folder: Exercises: Ejercicios que hice para prácticar los conceptos vistos.
+-  :file_folder: Homework: Las tareas que desarrollé para la materia. 
+- :file_folder: Reading: Resúmenes de los capítulos del libro Introduction to Algorithms.
+-  :file_folder: Resources: Códigos y notas proporcionadas por el profesor de la materia.  
