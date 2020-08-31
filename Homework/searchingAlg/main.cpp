@@ -4,6 +4,7 @@ using namespace std;
 
 
 int main(){
+    //5 números de prueba 
     int test1 = 9; 
     int test2 = 99; 
     int test3 = 32; 
@@ -11,12 +12,6 @@ int main(){
     int test5 = 42; 
     Search <int>testing; 
     testing.generateRandomInts(); 
-    cout << testing.sequential(test1) << endl;
-    testing.printElements(); 
-    cout << testing.transpose(test1) << endl;
-    testing.printElements();  
-    cout << testing.frontMovement(test1) << endl; 
-    testing.printElements(); 
     
     return 0; 
 }

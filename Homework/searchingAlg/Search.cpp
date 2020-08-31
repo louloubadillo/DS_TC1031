@@ -29,9 +29,9 @@ class Search{
 
         void generateRandomInts(){
             srand(time(0));
-            int quantity = 10;//00000; 
+            int quantity = 1000000; 
             for (int i = 0; i < quantity; i++){
-                int e = rand() % 10 + 1; //cambiar a 100
+                int e = rand() % 100 + 1; 
                 elements.push_back(e);
             }
         } 
@@ -69,12 +69,10 @@ class Search{
             return -1;
         } 
 
-        vector <T> sortVector(){
-            vector<T> saved(elements);
-            sort(elements.begin(), elements.end()); 
-            vector <T> sorted = elements; 
-            elements = saved;
-            return sorted; 
+
+        vector <T> sortAlg(){
+            sort(elements.begin(), elements.end());
+            return elements; 
         }
     
         //Tiene que estar sorted, pero lo voy a hacer fuera del método para que no afecte el tiempo de ejecución
@@ -83,19 +81,24 @@ class Search{
         } 
 
         //Tiene que estar sorted, pero lo voy a hacer fuera del método para que no afecte el tiempo de ejecución
-        int binarySearch(vector <T> v, T element, int min, int max){
+        int binarySearchRec(T element, int min, int max){
             int middle = (min + max)/2; 
             if(max < min){
                 return -1; 
             }
-            if(element == v[middle]){
+            if(element == elements[middle]){
                 return middle; 
             }
-            else if (element < v[middle]){
-                return binarySearch(v, element, min, middle-1); 
+            else if (element < elements[middle]){
+                return binarySearchRec(element, min, middle-1); 
             }
             else{
-                return binarySearch(v, element, middle+1, max); 
+                return binarySearchRec( element, middle+1, max); 
             }
         } 
+
+        int binarySearch(T element){
+            return binarySearchRec(element, 0, elements.size()); 
+        }
+
 }; 
