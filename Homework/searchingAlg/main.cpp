@@ -12,5 +12,11 @@ int main(){
     Search <int>testing; 
     testing.generateRandomInts(); 
     cout << testing.sequential(test1) << endl;
+    testing.printElements(); 
+    cout << testing.transpose(test1) << endl;
+    testing.printElements();  
+    cout << testing.frontMovement(test1) << endl; 
+    testing.printElements(); 
+    
     return 0; 
 }
