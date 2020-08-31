@@ -48,8 +48,10 @@ class Search{
         int frontMovement(T element){
             for(int i = 0; i<elements.size(); i++){
                 if(elements[i] == element){
-                    elements.erase(elements.begin()+i); 
-                    elements.insert(elements.begin(), element); 
+                    if(i != 0){
+                        elements.erase(elements.begin()+i); 
+                        elements.insert(elements.begin(), element);  
+                    } 
                     return i; 
                 }
             }
