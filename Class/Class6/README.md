@@ -10,8 +10,9 @@
 - También es uno de los más ineficientes.
 - Se trata de seleccionar el menor (o mayor) elemento en cada paso y colocarlo en la parte izquierda (o derecha) del arreglo, disminuir uno la longityd y repetir el proceso. 
 
-¿Qué recursos necesita en tiempo y memoria? 
+¿Qué recursos necesita en tiempo? 
 - Peor caso: $O(n^2)$
+- Mejor caso: $Ω(n^2)$
   
 ## Bubble Sort
 - Muy simple pero muy ineficiente
@@ -21,6 +22,29 @@
 - Si el elemento de la derecha es menor que el de la izquierda, se intercambian. 
 - Al final de la iteración, el elemento más grande es empujado hasta el final. 
 - El proceso se repite con un elemento menos. 
+
+¿Qué recursos necesita en tiempo? 
+- Peor caso: $O(n^2)$
+- Mejor caso: $Ω(n)$
+
 ## Insertion Sort
+- En cada paso, el elemento en cuestión queda colocando en el lugar correcto del arreglo, de acuerdo a todos los elementos que están antes que él. 
+- Cada elemento se compara con los que están antes: 
+  - Si es mayor, ahí se queda
+  - Si es menor, se mueve uno hacia la izquierda y se repite la operación hasta llegar a su posición correcta
+
+¿Qué recursos necesita en tiempo? 
+- Peor caso: $O(n^2)$
+- Mejor caso: $Ω(n)$
+
 ## Merge Sort
+- Algoritmo muy eficiente 
+- Trabaja con tres pasos: 
+  - Dividir el arreglo desordenado en dos partes
+  - Ordenar cada una de las partes recursivamente
+  - Combina (merge) las partes resultantes ordenadas
+  ¿Qué recursos necesita en tiempo? 
+- Peor caso: $O(n log(n))$
+- Mejor caso: $O(n log(n))$
+  
 ## Quick Sort
