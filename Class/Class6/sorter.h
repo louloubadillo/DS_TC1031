@@ -92,21 +92,47 @@ class MergeSort : public Sorter<T> {
         ~MergeSort() {}; 
 
         void sort(std::vector<T> &arr){
-            mergesort(arr, 0, arr.size()-1); 
+            std::vector<T> helper;
+            helper.reserve(arr.size());
+            mergesort(arr, helper, 0, arr.size() - 1);
         }
 
-        void mergesort(std::vector <T> &arr, int l, int r){
-            //recursive function
-            int m = l + (r - l)/2; //evita overflows
-            mergesort(arr,l,m);
-            mergesort(arr,m+1,r); 
-
-            merge(arr,l, m, r);
+        void mergesort(std::vector <T> &arr, std::vector <T> &helper, int start, int end){
+            if (start < end){
+                int med = (start + end) / 2;
+                mergesort(arr, helper, start, med);
+                mergesort(arr, helper, med + 1, end);
+                merge(arr, helper, start, med + 1, end);
+            }  
         }
 
-        void merge(std::vector <T> &arr, int l, int m, int r)[
-            /*tarea*/
-        ]
+        void merge(std::vector<T>& arr, std::vector<T>& helper, int start_a, int start_b, int end_b){
+            int end_a = start_b - 1;        // End of first half
+            int k = start_a;                // Next Position
+            int num = end_b - start_a + 1;  // Amount of elements
 
+            while (start_a <= end_a && start_b <= end_b) {
+                if (arr[start_a] <= arr[start_b]) {
+                    helper[k++] = arr[start_a++];
+                }
+                else {
+                    helper[k++] = arr[start_b++];
+                }
+            }
+
+            while (start_a <= end_a){
+                helper[k++] = arr[start_a++];
+            }
+
+            while (start_b <= end_b){
+                helper[k++] = arr[start_b++];
+            }
+
+            for ( int i = 0; i < num; i++, end_b--){
+                arr[end_b] = helper[end_b];
+            }
+                    
+        }
+            
 }; 
 #endif
