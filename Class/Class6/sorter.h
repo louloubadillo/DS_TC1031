@@ -134,5 +134,38 @@ class MergeSort : public Sorter<T> {
                     
         }
             
-}; 
+};
+
+template <typename T>
+class QuickSort : public Sorter<T>{
+    public: 
+    QuickSort() {}; 
+    ~QuickSort() {};
+
+    void sort(std::vector<T> &arr){
+        quicksort(arr,0,arr.size()-1); 
+    }
+
+    void quicksort(std::vector<T> &arr, int low, int high){
+        if (low < high){
+            int piv = partition(arr, low, high); 
+            quicksort(arr,low,piv-1); 
+            quicksort(arr, piv+1, high); 
+        }
+    } 
+
+    int partition(std::vector<T> &arr, int low, int high){
+        T pivot = arr[high]; 
+        int i = low - 1; 
+
+        for(int j = low; j <= high-1; j++){
+            if(arr[j] < pivot){
+                i++; 
+                Sorter<T>::swap(i,j,arr); 
+            }
+        }
+        Sorter<T>::swap(i+1,high, arr); 
+        return (i+1); 
+    }
+};
 #endif

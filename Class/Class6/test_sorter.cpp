@@ -45,6 +45,7 @@ int main(){
     vector<float> arr_2(arr_f);
     vector<float> arr_3(arr_f);
     vector<float> arr_4(arr_f);
+    vector<float> arr_5(arr_f);
     
     // get a baseline using std::sort
     DECLARE_TIMING(t);
@@ -88,6 +89,15 @@ int main(){
     STOP_TIMING(t4);
     compare_vectors(arr_f, arr_4, "Merge sort:");
     SHOW_TIMING(t4, "MergeSort");
+
+    // create instance of QuickSort
+    DECLARE_TIMING(t5);
+    START_TIMING(t5);
+    QuickSort<float> quisort;
+    quisort.sort(arr_5);
+    STOP_TIMING(t5);
+    compare_vectors(arr_f, arr_5, "Quick sort:");
+    SHOW_TIMING(t5, "QuickSort");
    
     return 0;
 }

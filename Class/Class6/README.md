@@ -38,13 +38,31 @@
 - Mejor caso: $Ω(n)$
 
 ## Merge Sort
+- Sigue la idea de "Divide y vencerás"
 - Algoritmo muy eficiente 
 - Trabaja con tres pasos: 
   - Dividir el arreglo desordenado en dos partes
   - Ordenar cada una de las partes recursivamente
   - Combina (merge) las partes resultantes ordenadas
-  ¿Qué recursos necesita en tiempo? 
+  
+¿Qué recursos necesita en tiempo? 
 - Peor caso: $O(n log(n))$
 - Mejor caso: $O(n log(n))$
   
 ## Quick Sort
+- De los algoritmos más utilizados. 
+- Es uno de los algoritmos llamados "Divide y vencerás"
+- Se puede programar elegantemente de forma recursiva. 
+- La estructura es: 
+  - Requiere utilizar un "pivote"
+  - Particionar alrededor de él 
+- Existen diferentes maneras de seleccionar el elemento pivote: 
+    - Usar el primer elemento
+    - Usar el último elemento
+    - Escogerlo aleatoriamente
+    - Seleccionar la mediana 
+
+¿Qué recursos necesita en tiempo? 
+- Peor caso: $O(n^2)$ 
+  - En promedio es: $O(n log(n))$
+- Mejor caso: $O(n log(n))$
