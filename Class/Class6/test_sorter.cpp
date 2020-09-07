@@ -43,6 +43,8 @@ int main(){
     // create copies of original vector to be sorted
     vector<float> arr_1(arr_f);
     vector<float> arr_2(arr_f);
+    vector<float> arr_3(arr_f);
+    vector<float> arr_4(arr_f);
     
     // get a baseline using std::sort
     DECLARE_TIMING(t);
@@ -75,18 +77,18 @@ int main(){
         DECLARE_TIMING(t3);
         START_TIMING(t3);
         InsertionSort<float> inssort;
-        inssort.sort(arr_2);
+        inssort.sort(arr_3);
         STOP_TIMING(t3);
-        compare_vectors(arr_f, arr_2, "Insertion sort:");
+        compare_vectors(arr_f, arr_3, "Insertion sort:");
         SHOW_TIMING(t3, "InsertionSort");
 
         // create instance of MergeSort
         DECLARE_TIMING(t4);
         START_TIMING(t4);
         MergeSort<float> mersort;
-        mersort.sort(arr_2);
+        mersort.sort(arr_4);
         STOP_TIMING(t4);
-        compare_vectors(arr_f, arr_2, "Merge sort:");
+        compare_vectors(arr_f, arr_4, "Merge sort:");
         SHOW_TIMING(t4, "MergeSort");
     }
 
