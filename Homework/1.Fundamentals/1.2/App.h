@@ -40,9 +40,9 @@ class App{
         cout << "2. InsertionSort" << endl;
         cout << "Any other number: QuickSort" << endl;
         cin >> sortingAlgorithm; 
-        int s1 = searchy.sequential(e); 
+        int s1 = searchy.buscSecuencial(e); 
         vector <int> sorted = sortVector(sortingAlgorithm);
-        int s2 = searchy.binarySearch(sorted, e); 
+        int s2 = searchy.busqBinaria(sorted, e); 
         searchy.printElements(); 
         cout << "According to the sequential search, the element " << e << " is at index: " << s1 << endl; 
         printElements(sorted); 

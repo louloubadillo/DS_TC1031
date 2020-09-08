@@ -37,7 +37,7 @@ class Searcher{
         cout << endl; 
     }
 
-    int sequential (int element){
+    int buscSecuencial (int element){
         for(int i = 0; i<elements.size(); i++){
             if(elements[i] == element){
                 return i; 
@@ -62,7 +62,7 @@ class Searcher{
             }
         } 
 
-        int binarySearch(vector<int> arr, int element){
+        int busqBinaria(vector<int> arr, int element){
             return binarySearchRec( arr, element, 0, elements.size()); 
         }
 }; 
