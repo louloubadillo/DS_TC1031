@@ -51,18 +51,18 @@ class App{
 
     vector <int> sortVector(int alg){
         vector<int> sorted(searchy.getVector());
-        if( alg == 1){
+        if( alg == 1) {
             cout << "Using BubbleSort " << endl; 
             BubbleSort bubsort;
             bubsort.ordenaBurbuja(sorted); 
         }
-        else if (alg == 2){
+        else if (alg == 2) {
             cout << "Using InsertionSort " << endl; 
             InsertionSort inssort; 
             inssort.ordenaInsercion(sorted); 
         }
-        else{
-             cout << "Using QuickSort " << endl; 
+        else {
+            cout << "Using QuickSort " << endl; 
             QuickSort quisort; 
             quisort.ordenaQuick(sorted); 
         }
