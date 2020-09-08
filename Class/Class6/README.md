@@ -61,6 +61,7 @@
     - Usar el último elemento
     - Escogerlo aleatoriamente
     - Seleccionar la mediana 
+- El proceso clave en quickSort es particion() 
 
 ¿Qué recursos necesita en tiempo? 
 - Peor caso: $O(n^2)$ 
