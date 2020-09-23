@@ -9,6 +9,7 @@ class Node{
     public: 
         ~Node<T>(); 
         Node<T>(T pValue, Node<T> *pNext); 
+
         T getValue(); 
         Node<T>* getNext(); 
         void setValue(T value); 
@@ -19,13 +20,15 @@ template <class T>
 class LinkedList{
     private: 
         Node<T> *head; 
-        Node<T> *tail; 
 
     public: 
         ~LinkedList(); 
         LinkedList(); 
         int length(); 
         void push(T pValue); 
+        void append(T pValue); 
+        int insertItem(T pVal, int index); 
+        int deleteItem(int index); 
         
 };
 
