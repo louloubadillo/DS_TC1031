@@ -70,18 +70,9 @@ bool seLlamaServer(Registro r){
 }
 
 bool esCorreo(Registro r){
-    mails.insert(pair<string, int>("gmail.com", 0)); 
-    mails.insert(pair<string, int>("hotmail.com", 0));
-    mails.insert(pair<string, int>("outlook.com", 0));
-    mails.insert(pair<string, int>("hey.com", 0));
-    if(
-        r.destino_hostname == "gmail.com" ||
-        r.destino_hostname == "hotmail.com" ||
-        r.destino_hostname == "microsoft.com" ||
-        r.destino_hostname == "hey.com" 
-    ){
+    //El puerto 993 se usa para mail
+    if(r.destino_puerto == 993){
         mails[r.destino_hostname]++; 
-        // return true; 
     }
     return false; 
 }
@@ -123,7 +114,7 @@ int main(void){
 
     //3. ¿Alguna de las computadoras pertenece a Jeffrey, Betty, Katherine, Scott, Benjamin, Samuel o Raymond?
     cout<<"3\t¿Alguna de las computadoras pertenece a Jeffrey, Betty, Katherine, Scott, Benjamin, Samuel o Raymond?"<<endl;
-    int perteneceCount = busquedaBinaria(datos, *perteneceA, 0, datos.size()-1);
+    int perteneceCount = busquedaSecuencial(datos, *perteneceA);
     cout<<( perteneceCount==0 ? "No." : "Sí." )<<endl;
 
     //4. ¿Cuál es la dirección de la red interna de la compañía?
@@ -143,7 +134,6 @@ int main(void){
     for (const auto& x : mails ) {
         std::cout << x.first << " \t" << x.second << "\n";
     }
-
 
     //7. Considerando solamento los puertos destino: 
     //¿Qué puertos abajo del 1000 se están usando? Lista los puertos. 
