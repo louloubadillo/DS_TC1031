@@ -20,5 +20,9 @@ int main(){
     list.print();  
     list.removeDuplicates(); 
     list.print(); 
+    list.reverse(); 
+    list.print(); 
+    list.deleteList(); 
+    list.print(); 
     return 0; 
 }

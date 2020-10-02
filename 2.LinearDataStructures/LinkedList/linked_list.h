@@ -146,6 +146,8 @@ class LinkedList{
 
         // Tarea. Incluir complejidad computacional de cada función
         
+
+        //Complejidad Temporal: O(n)
         int count(T searchFor){
             /* Dado un elemento, devuelve el número de veces que el mismo aparece en la lista. */
             int counter = 0; 
@@ -159,10 +161,21 @@ class LinkedList{
             return counter; 
         }; 
 
+        //Complejidad Temporal: O(n)
         void deleteList(){
-            /* Eliminar la lista enlazada y liberar memoria de todos sus nodos. */
+            /* Eliminar la lista enlazada y liberar memoria de todos sus nodos.
+            Libere toda su memoria y establezca su puntero principal en NULL (la lista vacía).
+            Nótese que debe primero liberarse la memoria de cada nodo de manera independiente 
+            y tener cuidado de no acceder a un nodo next si este ya fue liberado. 
+            */
+            while(head != NULL) {
+                Node<T>* temp = head->getNext();
+                delete head;
+                head = temp;
+            }
         }; 
 
+        //Complejidad Temporal: O(n)
         void sortedInsert(Node<T> * newNode){
             /* Dada una lista ordenada en orden creciente y un nodo, inserte el nodo en la posición ordenada correcta en la lista. */
             T addValue = newNode->getValue(); 
@@ -179,6 +192,7 @@ class LinkedList{
             std::cout << "Node was inserted" << std::endl; 
         }; 
 
+        //Complejidad Temporal: O(2n) = O(n)
         void removeDuplicates(){
             /* Toma una lista ordenada en orden creciente y elimina los nodos duplicados de la lista. Idealmente, la lista solo debería recorrerse una vez.*/
             Node<T> *current = head;  
@@ -196,8 +210,20 @@ class LinkedList{
             }
         }; 
 
+        //Complejidad Temporal: O(n)
         void reverse(){
-            /* Invertir orden de una lista enlazada. */
+            /* Invierta una lista enlazada reorganizando todos los punteros .next y el puntero head. 
+            Idealmente, Reverse () solo debería necesitar hacer una pasada de la lista. */
+            Node<T> *prevNode = NULL;
+            Node<T> *current = head;
+            Node<T> *nextNode = NULL;
+            while (current != NULL){
+                nextNode = current->getNext(); 
+                current->setNext(prevNode); 
+                prevNode = current; 
+                current = nextNode; 
+            }
+            head = prevNode; 
         }; 
 
 
