@@ -3,6 +3,7 @@
 
 #include <stddef.h> //para usar null
 #include <iostream>
+#include <vector> 
 
 template <class T>
 class Node{
@@ -24,7 +25,7 @@ class Node{
 
 template <class T>
 class LinkedList{
-    private: 
+    protected: 
         Node<T> *head; 
 
     public: 
@@ -142,6 +143,64 @@ class LinkedList{
             T item = current->getValue(); 
             return 1; 
         }; 
+
+        // Tarea. Incluir complejidad computacional de cada función
+        
+        int count(T searchFor){
+            /* Dado un elemento, devuelve el número de veces que el mismo aparece en la lista. */
+            int counter = 0; 
+            Node<T> *current = head;   
+            while(current != NULL){
+                if(current->getValue() == searchFor){
+                    counter++; 
+                }
+                current = current->getNext(); 
+            }
+            return counter; 
+        }; 
+
+        void deleteList(){
+            /* Eliminar la lista enlazada y liberar memoria de todos sus nodos. */
+        }; 
+
+        void sortedInsert(Node<T> * newNode){
+            /* Dada una lista ordenada en orden creciente y un nodo, inserte el nodo en la posición ordenada correcta en la lista. */
+            T addValue = newNode->getValue(); 
+            int index = 0; 
+            Node<T> *current = head;   
+            while(current != NULL && current->getValue() < addValue){
+                current = current->getNext(); 
+                index++; 
+            }
+            insertItem(addValue, index); //Esto no va a funcionar si se tiene que agregar al final
+            if(index == this->length()){
+                append(addValue); 
+            }
+            std::cout << "Node was inserted" << std::endl; 
+        }; 
+
+        void removeDuplicates(){
+            /* Toma una lista ordenada en orden creciente y elimina los nodos duplicados de la lista. Idealmente, la lista solo debería recorrerse una vez.*/
+            Node<T> *current = head;  
+            std::vector<int> atIndex;  
+            int counter = 0; 
+            while(current->getNext() != NULL){
+                if(current->getValue() == (current->getNext())->getValue()){
+                    atIndex.push_back(counter+1); 
+                }
+                current = current->getNext(); 
+                counter++;  
+            }
+            for(int i = 0; i < atIndex.size(); i++){
+                deleteItem(atIndex[i]-i); 
+            }
+        }; 
+
+        void reverse(){
+            /* Invertir orden de una lista enlazada. */
+        }; 
+
+
         
 };
 
