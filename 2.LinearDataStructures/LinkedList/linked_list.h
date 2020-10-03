@@ -158,6 +158,7 @@ class LinkedList{
                 }
                 current = current->getNext(); 
             }
+            std::cout << "The value " << searchFor << " appears " << counter << " times in the list." << std::endl; 
             return counter; 
         }; 
 

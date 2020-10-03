@@ -17,8 +17,12 @@ int main(){
     list.push(1);
     list.push(1);
     list.push(1); 
-    list.print();  
+    list.print(); 
+    list.count(4); 
     list.removeDuplicates(); 
+    list.print(); 
+    Node<int> newNode(3, NULL); 
+    list.sortedInsert(&newNode); 
     list.print(); 
     list.reverse(); 
     list.print(); 
