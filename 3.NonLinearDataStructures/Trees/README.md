@@ -102,3 +102,4 @@ void postorden(Nodo *Root){
 1. Preorden Converso (R, D, I)
 2. Inorden Converso (D, R, I)
 3. Postorden Converso (D, I , R)
+
