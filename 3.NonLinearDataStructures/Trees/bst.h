@@ -251,12 +251,12 @@ class BinarySearchTree{
 
        void printTreeBRec(BTreeNode<T>* node, int offset){
 
-
+            //Faltó implementar la manera en la que se incluyan las líneas. 
        }
 
 
        void printTreeC(){
-           // TODO
+           // Utiliza la misma implementación de printTreeB, pero falta implementar las líneas. 
        };
 
 
