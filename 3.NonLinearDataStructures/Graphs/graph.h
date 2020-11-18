@@ -103,10 +103,8 @@ public:
                 {
                     neighbors.push(adjacents.at(i));
                 }
-            }
-            
+            }   
         }
-
         std::cout << std::endl;
     }
 };
