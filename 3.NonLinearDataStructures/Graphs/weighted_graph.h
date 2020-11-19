@@ -62,16 +62,16 @@ public:
 
     std::vector<float> shortest_path(int s)
     {
-        vector<float> dist(nodes.size(), INT_MAX);
-        set<pair<int, float>> set_length_node;
+        vector<float> distance(nodes.size(), INT_MAX);
+        set<pair<int, float>> node_length;
 
-        dist[s] = 0;
-        set_length_node.insert(make_pair(0, s));
+        distance[s] = 0;
+        node_length.insert(make_pair(0, s));
 
-        while (!set_length_node.empty())
+        while (!node_length.empty())
         {
-            pair<int, float> top = *set_length_node.begin();
-            set_length_node.erase(set_length_node.begin());
+            pair<int, float> top = *node_length.begin();
+            node_length.erase(node_length.begin());
 
             int source_node = top.second;
             for (auto& it: nodes[source_node].get_adj())
@@ -79,20 +79,19 @@ public:
                 int adj_node = it.first;
                 int length_to_adjnode = it.second;
 
-                if (dist[adj_node] > length_to_adjnode + dist[source_node])
+                if (distance[adj_node] > length_to_adjnode + distance[source_node])
                 {
-                    if (dist[adj_node] != INT_MAX)
+                    if (distance[adj_node] != INT_MAX)
                     {
-                        set_length_node.erase(set_length_node.find(make_pair(dist[adj_node], adj_node)));
+                        node_length.erase(node_length.find(make_pair(distance[adj_node], adj_node)));
                     }
-                    dist[adj_node] = length_to_adjnode + dist[source_node];
-                    set_length_node.insert(make_pair(dist[adj_node], adj_node));
+                    distance[adj_node] = length_to_adjnode + distance[source_node];
+                    node_length.insert(make_pair(distance[adj_node], adj_node));
                 }
             }
         }
 
-        return dist;
-
+        return distance;
     };
 };
 
