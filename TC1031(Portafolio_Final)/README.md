@@ -11,7 +11,9 @@ Para resolver esta situación problema, deberemos analizar las siguientes pregun
 La solución se dividó en 6 evidencias, donde utilizamos distintas estructuras de datos para responder preguntas: 
 - [Reto 1:](https://github.com/louloubadillo/DS_TC1031/tree/master/TC1031(Portafolio_Final)/Reto1) Vectors
 - [Reto 2:](https://github.com/louloubadillo/DS_TC1031/tree/master/TC1031(Portafolio_Final)/Reto2) Linked Lists
-- [Reto 3:](https://github.com/louloubadillo/DS_TC1031/tree/master/TC1031(Portafolio_Final)/Reto3): Sets and maps
+- [Reto 3:](https://github.com/louloubadillo/DS_TC1031/tree/master/TC1031(Portafolio_Final)/Reto3) Sets and maps
 - [Reto 4:](https://github.com/louloubadillo/DS_TC1031/tree/master/TC1031(Portafolio_Final)/Reto4) Trees
 - [Reto 5:](https://github.com/louloubadillo/DS_TC1031/tree/master/TC1031(Portafolio_Final)/Reto5) Graphs
 - [Reto 6:](https://github.com/louloubadillo/DS_TC1031/tree/master/TC1031(Portafolio_Final)/Reto6) Evidencia final por medio de un póster que ilustra y responde la situación problema
+
+Este trabajo fue elaborado junto con Eduardo Villalpando ([@edvilme](https://github.com/edvilme))
