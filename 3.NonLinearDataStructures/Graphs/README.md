@@ -60,9 +60,3 @@ Usando el grafo de ejemplo, la lista de adyacencia es:
 <p>
   <img src="adjacencylist.png" width="250" title="Lista Ejemplo">
 </p>
-
-## Encontrar el Camino más Corto
-- Find the shortest path between v and w.
-
-- En grafos con peso, el camino más corto entre v y w es el camino con el costo mínimo. 
-- Cost of path = sum of weighs along the path
